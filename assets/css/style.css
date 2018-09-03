@@ -1,0 +1,21 @@
+body{
+    background-color:black;
+}
+
+.card{
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:5%;
+}
+
+.card-body{
+    text-align:center;
+}
+
+.answer{
+    font-size: 24px;
+}
+
+button{
+    margin:5px;
+}
