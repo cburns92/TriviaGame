@@ -108,6 +108,9 @@ $(function() {
         var startButton = $("<button></button>").text("Press to Start").click(start)
         $("#answerDisplay").append(startButton)
         clearInterval(x)
+        var audio = new Audio('assets/images/Space Lounge Loop.wav');
+        audio.loop = true;
+        audio.play();   
     }
 
     function start(){
@@ -185,6 +188,7 @@ $(function() {
     }
 
     initialize()
+    
     
 })  
    
