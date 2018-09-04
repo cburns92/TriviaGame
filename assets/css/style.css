@@ -6,8 +6,8 @@ body{
 }
 
 .card{
-    margin-left:30%;
-    margin-right:30%;
+    margin-left:1%;
+    margin-right:1%;
     margin-top:20px;
     border:solid black 20px;
     font-family: 'Space Mono', monospace;
