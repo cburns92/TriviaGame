@@ -1,11 +1,15 @@
 body{
-    background-color:black;
+    background-image:url("../images/background.jpg");
+    background-position:auto;
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
 .card{
-    margin-left:15%;
-    margin-right:15%;
-    margin-top:5%;
+    margin-left:30%;
+    margin-right:30%;
+    margin-top:10%;
+    border:solid black 3px;
 }
 
 .card-body{
@@ -19,3 +23,9 @@ body{
 button{
     margin:5px;
 }
+
+#timer{
+    border-top: solid black 2px;
+    padding-top:10px;
+}
+

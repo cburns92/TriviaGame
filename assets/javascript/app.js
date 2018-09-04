@@ -28,15 +28,20 @@ $(function() {
         if (!answered){
             if ($(this).attr("value") === "correct"){
                 correct++
-                $("#messages").text("Correct!")
+                $("#messages").text("Correct!    ")
             }
             else{
                 incorrect++
-                $("#messages").text("Incorrect!")
+                $("#messages").text("Incorrect!    ")
             }
             clearInterval(x)
-            setTimeout(nextQ,2000)  
+            setTimeout(nextQ,3000)              
             answered = true; 
+            var image = $("<img>").attr("src","https://via.placeholder.com/350x150")
+            $("#imageDisplay").append(image)
+            $("#answerDisplay").empty()
+            var result = $("<div></div").text("The answer is " + questions[currentQ].correctAnswer + "!")
+            $("#messages").append(result)
         }              
     })
 
@@ -48,7 +53,7 @@ $(function() {
         else{
             $("#timer").text("Out of Time!")
             clearInterval(x)
-            setTimeout(nextQ,2000)
+            setTimeout(nextQ,3000)
             answered = true
             incorrect--;
         }
@@ -74,11 +79,24 @@ $(function() {
             }         
     }
 
+    function reset(){
+        console.log("restart successful")
+        currentQ = -1;
+        correct = 0;
+        incorrect = 0;
+        answered = false;
+        timer = 15;
+        $("#messages").empty()
+        $("<button>").remove()
+        nextQ()  
+    }
+
     function nextQ(){
         console.log("nextQ successful!")
         $("#answerDisplay").empty()
         $("#messages").empty()
         $("#timer").empty()
+        $("#imageDisplay").empty()
         currentQ++;
         
         
@@ -86,7 +104,7 @@ $(function() {
             $("#questionDisplay").text("End of Quiz")
             var correctDisplay = $("<div></div>").text("Correct: " + correct)
             var incorrectDisplay =$("<div></div>").text("Incorrect: " + incorrect)
-            var restart = $("<button></button>").text("Try Again!").click(start)
+            var restart = $("<button></button>").text("Try Again!").click(reset)
             $("#messages").append(correctDisplay).append(incorrectDisplay).append(restart)
             
         }
@@ -94,6 +112,7 @@ $(function() {
             timer = 15;
             $("#timer").text(timer)
             $("#questionDisplay").text(questions[currentQ].question)
+            $("<img>").remove()
             x = setInterval(updateTimer,1000)
 
             for (i = 0; i < questions[currentQ].answers.length;i++){
