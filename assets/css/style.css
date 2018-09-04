@@ -9,7 +9,8 @@ body{
     margin-left:30%;
     margin-right:30%;
     margin-top:10%;
-    border:solid black 3px;
+    border:solid black 20px;
+    font-family: 'Space Mono', monospace;
 }
 
 .card-body{

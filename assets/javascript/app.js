@@ -55,7 +55,7 @@ $(function() {
             clearInterval(x)
             setTimeout(nextQ,3000)
             answered = true
-            incorrect--;
+            incorrect++;
         }
         
     }
