@@ -45,7 +45,7 @@ $(function() {
         image:"assets/images/q7.jpg" 
     },{
         question: "How many minutes was the shortest space flight?",
-        answers: ["15 minutes","45 minutes", "3 hours","8 hours"],
+        answers: ["10 minutes","15 minutes", "25 minutes","50 minutes"],
         correctAnswer:"15 minutes",
         image:"assets/images/q8.png" 
     },{
